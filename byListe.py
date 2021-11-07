@@ -1,5 +1,6 @@
 # l =[(1,2),(1,3),(1,4),(2,5),(5,2)]
 # 1,2 1,3 1,4 1,5 1,7 2,3 2,4 2,7 3,4 3,5 3,6 4,5 4,6 5,6 5,7 6,7
+import collections
 def nextDictFromList(list):
     nextDict = {}
     for arc in list:
@@ -9,7 +10,8 @@ def nextDictFromList(list):
             nextDict[arc[0]] = [arc[1]]
         if arc[1] not in nextDict:
             nextDict[arc[1]] = []
-    return nextDict
+    od = collections.OrderedDict(sorted(nextDict.items()))
+    return od
 
 def getPreviousFromNext(nextDict):
     prevDict = {}

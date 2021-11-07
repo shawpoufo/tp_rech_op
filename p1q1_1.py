@@ -1,6 +1,9 @@
 #literal_eval("[-1,0,0,0,1,0],[1,-1,0,0,0,1],[0,1,-1,0,0,0],[0,0,1,-1,0,0],[0,0,0,1,-1,-1]")
+# [0 1 0] 1->2
+# [1 0 1] 2->1 2->3
+# [1 0 0] 3->1
 from ast import literal_eval
-from p1 import format,getPreviousFromNext
+from byListe import format,getPreviousFromNext
 # -1 : sort
 #  1 : entre
 #  0 : none

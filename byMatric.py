@@ -1,6 +1,6 @@
 from ast import literal_eval
+import collections
 from byListe import format,getPreviousFromNext
-# from p1q2 import format,getPreviousFromNext
 
 def getNextFromMatric(matric):
     nextDict = {}
@@ -9,7 +9,8 @@ def getNextFromMatric(matric):
         for j in range(len(matric[i])):
             if matric[i][j] == 1:
                 nextDict[i + 1].append(j+1)
-    return nextDict
+    od = collections.OrderedDict(sorted(nextDict.items()))
+    return od
 
 if __name__ == "__main__":
     inp = input("entrer la matric des incidence : ")

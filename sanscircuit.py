@@ -7,7 +7,7 @@ import collections
 #     return [i for i,r in enumerate(matrix) for j,v in enumerate(r) if v == 1 and j == vertex]
 
 # 1,5 2,1 2,3 2,4 4,3 4,7 5,3 6,4 6,5 6,7 #sans circuit
-# 1,2 2,3 2,5 3,4 3,5 4,2 5,4 6,1 6,        #avec circuit
+# 1,2 2,3 2,5 3,4 3,5 4,2 5,4 6,1 6,3        #avec circuit
 
     
 
@@ -25,7 +25,9 @@ import collections
 #                     print(f"circuit : {i+1, [i+1 for i in unionvertices] , j+1 , i+1}")                
 #                     return True
 #     return False
-
+""" si on arrive à décomposer le graphe en niveau 
+    donc le graph ne contient pas de circuit
+"""
 def hasCycle(ddp):
     levels = {}
     lvl = -1
